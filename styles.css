@@ -1,3 +1,8 @@
+title {
+    font-family: Quicksand;
+    color: #000000;
+}
+
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
@@ -6,3 +11,10 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body {
+    background: linear-gradient(#011f31, #59768a, #e7d8ba);
+    background-repeat:no-repeat;
+    background-size: cover;
+    height: 100vh;
+}  
