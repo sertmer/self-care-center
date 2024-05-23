@@ -3,14 +3,14 @@ var favMessageButton = document.querySelector('.favorite-button');
 var messageButton = document.querySelector('.message-button');
 var outputLocation = document.querySelector('.output-box');
 var showButton = document.querySelector('.show-button');
-
+var homeButton = document.querySelector('.home-button');
 var messageOutput;
 var storedArray;
 favMessageButton.addEventListener('click', favThisMessage);
 
 messageButton.addEventListener('click', messageDisplay);
 showButton.addEventListener('click', showFavs)
-
+homeButton.addEventListener('click', returnHome)
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
@@ -62,6 +62,8 @@ function favThisMessage() {
 }
 
 function showFavs() {
+
+
     if (typeof (Storage)) {
         if (sessionStorage.favArray) {
             storedArray = JSON.parse(sessionStorage.getItem('favArray'));
@@ -73,6 +75,10 @@ function showFavs() {
     }
 }
 
+function returnHome()
+{
+return "hey";
+}
 
 function sessionStorageTest() {
     if (typeof (Storage)) {
