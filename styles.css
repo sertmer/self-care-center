@@ -6,54 +6,67 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
-body{
+body {
     font-family: 'Quicksand', sans-serif;
     text-align: center;
-    color:#fff;
+    color: #fff;
     height: max-content;
     font-weight: bold;
     background-attachment: fixed;
     background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
 }
-p{
-    color:#fff;
+
+p {
+    color: #fff;
 }
-.box{
+
+.box {
     text-align: center;
-    border-radius:30px;
+    border-radius: 30px;
     background-color: #fff;
     border-color: #fff;
-    color:black;
+    color: black;
     padding-left: 1vmin;
     padding-right: 1vmin;
     padding-top: 7.5vmin;
     padding-bottom: 7.5vmin;
-    
+
 }
-.box1
-{
+
+.box1 {
     margin-left: 30vmin;
     margin-right: 30vmin;
 }
 
-img{
-width:100px 
+img {
+    width: 100px
 }
 
-label{
+label {
     display: inline-block;
-    vertical-align: top;
+    /* vertical-align: auto; */
+    margin-bottom: 15px;
+
 }
-input{
+
+input {
     display: inline-block;
     vertical-align: top;
     /* margin-right:30px; */
-
+    margin: auto;
 }
-.mantra-button{
-text-align:center;
-color:#fff;
-background-color:#134d71;
-display: inline-block;
-padding:15px;
+
+#affirmationRadio {
+    margin-right: 50px;
+}
+
+.message-button {
+    text-align: center;
+    color: #fff;
+    background-color: #134d71;
+    display: flex;
+    margin: auto;
+    padding: 15px;
+    border-radius:20px;
+
 }

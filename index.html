@@ -10,18 +10,21 @@
     </h1>
     <p>"Blah blah"</p>
     <div class="box1 box"> 
-      <input type="radio" id = "affirmationRadio" name="radioMessage" value="message">
-      <label for="affirmationRadio">Affirmation</label>
-      <input type="radio" id = "mantraRadio" name="radioMessage" value="mantra">
-      <label for="mantraRadio">Mantra</label>
+      <label for="affirmation-radio">Affirmation</label>
+      <input type="radio" id = "affirmation-radio" name="radio-message" value=affirmations>
+      <label for="mantra-radio">Mantra</label>
+      <input type="radio" id = "mantra-radio" name="radio-message" value=mantras>
+      <button class="message-button">Show Message</button>
     </div>
 
     <h2>Which type of message?</h2>
-    <div class="box">    <img src = "./assets/meditate.svg" alt="My Happy SVG"/>
+    <div class="box output-box" id="message-output"><img src = "./assets/meditate.svg" alt="My Happy SVG"/>
     </div>
 
     <div class="hasBackground"></div>
+    
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="data.js"></script>
 
   </body>
 </html>
