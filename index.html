@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="page-topper">
+    <div></div>
+    <div></div>
     <h1>
       Self Care Center
     </h1>
-    <p>"Blah blah"</p>
-    <div class="box1 box"> 
-      <label for="affirmation-radio">Affirmation</label>
-      <input type="radio" id = "affirmation-radio" name="radio-message" value=affirmations>
-      <label for="mantra-radio">Mantra</label>
-      <input type="radio" id = "mantra-radio" name="radio-message" value=mantras>
-      <button class="message-button">Show Message</button>
+    <button class="button show-button"> Show Favs </button>
+  </div>
+  <section class="main-page-view">
+    <p>"Blah blah"
+    </p>
+    <div class="box1 box">
+      <div class="radios">
+        <div>
+          <label for="affirmation-radio">Affirmation</label>
+          <input type="radio" id="affirmation-radio" name="radio-message" value=affirmations>
+        </div>
+        <div>
+          <label for="mantra-radio">Mantra</label>
+          <input type="radio" id="mantra-radio" name="radio-message" value=mantras>
+        </div>
+      </div>
+      <button class="button message-button">Show Message</button>
+
     </div>
 
     <h2>Which type of message?</h2>
-    <div class="box output-box" id="message-output"><img src = "./assets/meditate.svg" alt="My Happy SVG"/>
-    </div>
-
+    <button class="button favorite-button">Favorite this message!</button>
+    <div class="box output-box" id="message-output"><img src="./assets/meditate.svg" alt="My Happy SVG" /></div>
     <div class="hasBackground"></div>
-    
-    <script type="text/javascript" src="main.js"></script>
-    <script type="text/javascript" src="data.js"></script>
+  </section>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="data.js"></script>
 
-  </body>
+</body>
+
 </html>
