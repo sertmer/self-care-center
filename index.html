@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-  
-    <script type="text/javascript" src="main.js"></script>
-  </body>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="page-topper">
+    <button class="hidden button home-button">Back to Home</button>
+    <h1>
+      Self Care Center
+    </h1>
+    <button class="button show-button"> Show Favs </button>
+  </div>
+  <section class="main-page-view">
+    <p>"Choose your Message Type."
+    </p>
+    <div class="box1 box">
+      <div>
+        <div class="radios">
+          <div>
+            <label for="affirmation-radio">Affirmation</label>
+            <input type="radio" id="affirmation-radio" name="radio-message" value=affirmations>
+          </div>
+          <div>
+            <label for="mantra-radio">Mantra</label>
+            <input type="radio" id="mantra-radio" name="radio-message" value=mantras>
+          </div>
+        </div>
+      </div>
+      <button class="button message-button">Show Message</button>
+    </div>
+    <h2>Which type of message?</h2>
+    <button class="button favorite-button">Favorite this message!</button>
+    <div class="box output-box" id="message-output"><img src="./assets/meditate.svg" alt="My Happy SVG" /></div>
+    <div class="hasBackground"></div>
+  </section>
+  <section class="fav-page-view hidden">
+    <div class="fav-area-divider">
+      <div class="fav-show-area box" id="fav-output">
+        You shouldn't be seeing this.
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="data.js"></script>
+
+</body>
+
 </html>

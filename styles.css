@@ -6,3 +6,124 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+body {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    color: #fff;
+    height: max-content;
+    font-weight: bold;
+    background-attachment: fixed;
+    background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+
+}
+
+p {
+    color: #fff;
+}
+
+.box {
+    display: flex;
+    text-align: center;
+    border-radius: 30px;
+    background-color: #fff;
+    border-color: #fff;
+    color: black;
+    padding-left: 1vmin;
+    padding-right: 1vmin;
+    padding-top: 7.5vmin;
+    padding-bottom: 7.5vmin;
+    justify-content: space-evenly;
+
+}
+
+.box1 {
+    display: flex;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 20px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.radios {
+    width: 300px;
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+img {
+    width: 100px
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 15px;
+
+}
+
+input {
+    display: inline-block;
+    vertical-align: top;
+    margin: auto;
+}
+
+#affirmationRadio {
+    margin-right: 50px;
+}
+
+.button {
+    text-align: center;
+    color: #fff;
+    background-color: #134d71;
+    display: flex;
+    margin: auto;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.page-topper {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.page-topper>h1 {
+    height: auto;
+    display: inline-flex;
+    align-self: center;
+}
+
+.show-button {
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1px;
+    margin-right: 1px;
+
+}
+.home-button{
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.hidden {
+    display: none;
+}
+
+.main-page-view{
+    
+}
+.fav-show-area{
+    justify-content: center;
+    flex-direction: column;
+    width:30em;
+}
+.fav-area-divider{
+    display: flex;
+    justify-content: center;
+}
