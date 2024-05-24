@@ -23,12 +23,10 @@ function getRandomIndex(array) {
 }
 
 function messageDisplay() {
-    // outputLocation.innerHTML = null;
     if (!document.querySelector('input[name="radio-message"]:checked')) {
         outputLocation.innerText = "Please select the kind of message you'd like to read!";
         return 'invalid';
     }
-
     var typeDisplayed = document.querySelector('input[name="radio-message"]:checked').value;
     if (!typeDisplayed) {
         outputLocation.innerText = "Please select the kind of message you'd like to read!";
@@ -49,9 +47,7 @@ function favThisMessage() {
         console.log("messageOutput isn't defined");
     }
     else {
-
         favMessageArray.push(messageOutput);
-        console.log(favMessageArray);
         if (typeof (Storage)) {
             if (sessionStorage.favArray) {
                 storedArray = JSON.parse(sessionStorage.getItem('favArray'));
@@ -62,13 +58,11 @@ function favThisMessage() {
                 storedArray.push(messageOutput);
                 sessionStorage.setItem('favArray', JSON.stringify(storedArray));
             }
-            console.log(sessionStorage.favArray);
         }
     }
 }
 
 function showFavs() {
-
 
     if (typeof (Storage)) {
         if (sessionStorage.favArray) {
@@ -81,26 +75,20 @@ function showFavs() {
                 unfavoriteEventArray[i] = document.querySelector(`#unfavorite-${i}`);
                 unfavoriteEventArray[i].indexValue = i;
                 unfavoriteEventArray[i].addEventListener('click', unFavorite);
-
             }
         }
     }
-
     showButton.classList.add('hidden');
     homePage.classList.add('hidden');
     favPage.classList.remove('hidden');
     homeButton.classList.remove('hidden');
-
 }
 
 function returnHome() {
-
     showButton.classList.remove('hidden');
     homePage.classList.remove('hidden');
     favPage.classList.add('hidden');
     homeButton.classList.add('hidden');
-
-    return "hey";
 }
 
 function unFavorite() {
@@ -108,23 +96,10 @@ function unFavorite() {
     if (typeof (Storage)) {
         if (sessionStorage.favArray) {
             storedArray = JSON.parse(sessionStorage.getItem('favArray'));
-            console.log(indexToUse);
             storedArray.splice(indexToUse, 1);
             sessionStorage.setItem('favArray', JSON.stringify(storedArray));
             showFavs();
         }
     }
-    console.log(this.id)
 }
 
-function sessionStorageTest() {
-    if (typeof (Storage)) {
-        if (sessionStorage.countClick) {
-            sessionStorage.countClick += 1;
-
-        } else {
-            sessionStorage.countClick = 1;
-        }
-        console.log(sessionStorage.countClick.length);
-    }
-}
