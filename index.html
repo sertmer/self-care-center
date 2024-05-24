@@ -7,18 +7,22 @@
     <title>Self Care Center</title>
   </head>
   <body>
-    <h1>✨Self Care Center✨</h1> 
-    <h2>Which type of message?</h2>
-      <section class="control-box">
-          <input class="affirmation" input type="radio" ></input>
-          <label class="affirmation-button">affirmation</label>
-          <input class="mantra" input type="radio" ></input>
-          <label class="mantra-button">mantra</label>
+    <h1 id="title">✨Self Care Center✨</h1> 
+    <h2 id="header">Which type of message?</h2>
+      <section class="imput-box">
+        <form>
+          <input type="radio" class="affirmation" name=message-to-display>
+          <label for="affirmation-button">affirmation</label>
+          <input type="radio" class="mantra" name=message-to-display>
+          <label for="mantra-button">mantra</label>
+            <p><button class="display-message-button" type="submit">Receive Message</button></p>
+          </form>
       </section>
-      </section class="display-result-box">
-        <i class="fa-solid fa-bell"></i>
-        <button class="display-message-button" type="button">Receive Message</button>
-      </section>
-    </div>
+      </section class="display-message-container">
+        <div class="display-message">
+          <img class="img-bell" src="./assets/meditate.svg"> alt ="meditation bell"> 
+        </div>
+          
   </body>
 </html>
+

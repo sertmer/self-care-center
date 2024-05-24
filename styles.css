@@ -13,8 +13,48 @@ black - #000000;
 */
 
 body {
-    background: linear-gradient(#011f31, #59768a, #e7d8ba);
-    background-repeat:no-repeat;
-    background-size: cover;
+    background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+    background-repeat: no-repeat;
+    background-size: auto;
     height: 100vh;
 }  
+
+h1 {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  color: white;
+  font-family: quicksand;
+ }
+
+h2 {
+  text-align: center;
+  color: white;
+  position: relative;
+  font-family: quicksand;
+}
+
+
+.imput-box {
+  display:flex;
+  background-color: white;
+  justify-content: space-evenly;
+  height:75px;
+  width:500px;
+  margin:auto;
+  margin-top:5%;
+  padding-top:auto;
+  border: radius 10px;;
+  text-align: center;
+}
+
+.img-bell {
+  width:200px;
+  display:flex;
+  height:60px;
+  background:white;
+  color:white;
+  text-decoration:none;
+  padding-left:20px;
+}
+
