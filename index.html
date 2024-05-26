@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-    <title>✨ Self Care Center ✨</title>
-  </head>
-  <body>
-    <div class="title">
-      <h1>✨ Self Care Center ✨</h1>
-    </div>
-    <div class="which-type">
-      <p>Which type of message?</p>
-    </div>
-    <form class="buttons-form">
-      <div class="radio-buttons">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <title>✨ Self Care Center ✨</title>
+</head>
+
+<body>
+  <div class="title">
+    <h1>✨ Self Care Center ✨</h1>
+  </div>
+
+  <div class="which-type">
+    <p>Which type of message?</p>
+  </div>
+
+  <div class="select-msg-container container">
+    <div class="radio-buttons-container">
+      <div class="radio-button">
         <input type="radio" id="affirmation-button" name="option" option="option1" value="affirmation-array">
-        <span class="affirmation-button-text">affirmation</span>
+        <label class="affirmation-button-text">affirmation</label>
+      </div>
+
+      <div class="radio-button">
         <input type="radio" id="mantra-button" name="option" option="option2" value="mantra-array">
-        <span class="mantra-button-text">mantra</span>
+        <label class="mantra-button-text">mantra</label>
       </div>
-      <div class="receive-message-button">
-        <button type="button"id="receive.msg.button">Receive Message</button>
+    </div>
+
+    <div class="submit-button-container">
+      <div id="receive-msg-button">Receive Message</div>
+    </div>
+  </div>
+
+  <div class="receive-msg-container container">
+    <div class="dynamic-msg-container">
+      <div class="svg-img">
+        <img class="meditate-image" src="assets/meditate.svg" alt="meditate icon">
       </div>
-    </form>
-    <form class="messages-form"> 
-      <div class="svg-box">
-        <img class="meditate-image"src="assets/meditate.svg"alt="meditate icon">
-      </div>
-    </form>
+
+      <p id="message">hello hellojwodfnqof</p>
+    </div>
+
+    <div class="remove-msg-container hidden">
+      <p id="remove-msg">Didn't like that one? Click to remove it!</p>
+    </div>
+  </div>
+
   <script type="text/javascript" src="main.js"></script>
-  </body>
+</body>
+
 </html>

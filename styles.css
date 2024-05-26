@@ -1,22 +1,13 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
-light-yellow - #f7e4bf;
-light-blue - #78a7c6;
-dark-blue - #134d71;
-white - #ffffff;
-black - #000000;
-*/
-
 body {
     text-align: center;
     background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
     min-height: 100vh;
     font-family: "Quicksand", sans-serif;
     color: #ffffff;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;  */
+}
+
+.hidden { 
+    display: none;
 }
 
 .title {
@@ -24,25 +15,86 @@ body {
     flex-direction: column;
     font-family: "Quicksand", sans-serif;
     color: #ffffff;
-    font-size: 16px;
-    margin-block-start: 30px;
+    font-size: 18px;
+    margin-bottom: 140px;
 }
-
 
 .which-type {
     display: flex;
     flex-direction: column;
-    font-size: 25px;
-    font-style: inherit;
-}  
+    font-size: 29px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.container {
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 0 auto;
+    width: 650px;
+    color: black;
+}
 
 
-.buttons-form {
+.select-msg-container {}
+
+.radio-buttons-container {
+    padding: 5px;
     display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.radio-button {
+    display: flex;
+    font-style: italic;
+    font-size: 20px;
+
+    input[type='radio'] {
+        transform: scale(2);
+    }
+
+    text-indent: 20px;
+}
+
+.submit-button-container {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#receive-msg-button {
+    color: white;
+    font-size: 18px;
+    background-color: #134d71;
+    border-radius: 4px;
+    padding: 5px 30px;
+}
+
+.svg-img {
+
+}
+.svg-img img {
+    width: 100%;
+}
+
+.receive-msg-container {
+    margin-top: 100px;
+    width: 825px;
+    padding: 50px 0;
+}
+
+.dynamic-msg-container {
 
 }
 
-.svg-box {
-    display: flex;
-    flex-direction: column;
+#message {
+    font-size: 24px;
+
+}
+
+.remove-msg-container {
+    
 }
