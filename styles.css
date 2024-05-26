@@ -6,7 +6,7 @@ body {
     color: #ffffff;
 }
 
-.hidden { 
+.hidden {
     display: none;
 }
 
@@ -36,9 +36,6 @@ body {
     width: 650px;
     color: black;
 }
-
-
-.select-msg-container {}
 
 .radio-buttons-container {
     padding: 5px;
@@ -73,12 +70,12 @@ body {
     padding: 5px 30px;
 }
 
-.svg-img {
+.svg-img {}
 
-}
 .svg-img img {
     width: 100%;
 }
+
 
 .receive-msg-container {
     margin-top: 100px;
@@ -86,15 +83,12 @@ body {
     padding: 50px 0;
 }
 
-.dynamic-msg-container {
-
-}
-
 #message {
     font-size: 24px;
 
 }
 
-.remove-msg-container {
-    
+
+#remove-msg {
+    color: #134d71;
 }
