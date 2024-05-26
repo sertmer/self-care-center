@@ -26,7 +26,7 @@
 
 //Refactor/clean up:
 
-var affirmation = [
+var affirmations = [
     
     'I am confident.',
     'I am strong.',
@@ -63,7 +63,7 @@ var affirmation = [
     'Today I choose to be happy.'
 ];
 
-var mantra = [
+var mantras = [
     'Sometimes you win, sometimes you learn.',
     'Mistakes are opportunitites to grow.',
     'Practice makes progress.',
@@ -88,31 +88,65 @@ var mantra = [
     'Be an optimist who carries a rain coat.',
 ];
 
-// var affirmations =  document.querySelector('.affirmation-button');
-// var mantras =  document.querySelector('.mantra-button');
-// var displayMessageContainer = document.querySelector('.display-message-container');
+//NEW PLAN:
+//1.Add Variables as I am using them
+//2.Add Event Listeners as I am using them
+//3.Triple check connections
+
+//VARIABLES:
+
+// var affirmation =  document.querySelector('.affirmation-button');
+// var mantra =  document.querySelector('.mantra-button');
+var displayMessageContainer = document.querySelector('.display-message-container');
 // var inputBox = document.querySelector('.input-box'); 
-// var affirmationButton = document.querySelector('.affirmation-button');
-// var mantraButton = document.querySelector('.mantra-button');
-// var meditationImg = document.querySelector('meditation-img');
-// var mantraButtonChecked = document.querySelector('mantra');
+var affirmationButton = document.querySelector('.affirmation-button')
+var mantraButton = document.querySelector('.mantra-button')
+var receiveMessageButton = document.querySelector('.receive-message-button')
+var meditationImg = document.querySelector('.meditation-img');
+var actualMessage = document.querySelector(".actual-message")
+// var inputBoxParent = document.querySelector('input-box-parent')
+// // var mantraButtonChecked = document.querySelector('mantra');
 
-// var affirmationButtonChecked = document.querySelector('affirmation').checked;
-// var receiveMessageButton = document.querySelector('.receive-message-button').checked;
+// // NEEED THIS TO CHECK RADIO BUTTONS
+// var affirmationButtonChecked = document.querySelector('affirmation')
+// var mantraButtonChecked = document.querySelector('mantra')
 
 
+// //EVENT LISTENERS: 
+
+// // affirmationButton = document.addEventListener("click", showRandomMessage);
+// // mantraButton = document.addEventListener("click", showRandomMessage);
+// // meditationImg = document.addEventListener("click", showRandomMessage);
+receiveMessageButton = document.addEventListener("click", showRandomMessage);
 // affirmationButton = document.addEventListener("click", showRandomMessage);
 // mantraButton = document.addEventListener("click", showRandomMessage);
-// meditationImg = document.addEventListener("click", showRandomMessage);
-// receiveMessageButton = document.addEventListener("click", showRandomMessage);
 
-// displayMessageContainer.addEventListener("click", showRandomMessage);
+// //FUNCTIONS AND EVENT HANDLERS:
 
 
-function getRandomIndex(array) {
-    return Math.floor(Math.random() * array.length);
+function getRandomIndex (anArray) {
+    aMessageIndex = Math.floor(Math.random() * anArray.length);
+    return anArray.at(aMessageIndex);
+  };
+
+function getRandomMantra() {
+    var randomMantra = getRandomIndex(mantras);
+    actualMessage.innerHTML = randomMantra;
 }
 
+function getRandomAffirmation() {
+    var randomAffirmation = getRandomIndex(affirmations);
+    actualMessage.innerHTML = randomAffirmation;
+}
 
+function showRandomMessage() {
+   
+    if (affirmationButton.checked === true ) {
+        getRandomAffirmation();
+    } else if (mantraButton.checked === true) {
+        getRandomMantra();
+    }
+    meditationImg.classList.add('hidden');
+}
 
 
