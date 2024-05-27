@@ -140,13 +140,12 @@ function getRandomAffirmation() {
 }
 
 function showRandomMessage() {
-   
+    meditationImg.classList.add('hidden');
     if (affirmationButton.checked === true ) {
         getRandomAffirmation();
     } else if (mantraButton.checked === true) {
         getRandomMantra();
     }
-    meditationImg.classList.add('hidden');
 }
 
 
