@@ -1,31 +1,3 @@
-//Iteration 0- To do: separate the radio buttons.
-//Iteration 'Choose your own adventure'- Add a delete feature
-//Other- Complete the read-me file, deploy
-
-//Iteration 1
-
-//Restate the goal: 
-//When a user selects a message option and then clicks the "receive Message" button, the user sees a random message from the list of possible messages for that category.
-//When the message appears, the meditation icon dissapears from the message area.
-
-//Consider the data: 
-//Ask clarifying questions:
-//How many functions do I need to build?
-//Will I need to add anything to HTML in order to make my code work?
-
-//Psuedocode:
-//Research what you don't know:
-//Steps:
-
-//2. add querySelector for variables
-//3. add eventListeners for buttons
-//4. create a function to generate a random message
-
-
-//Start coding by rerefrencing the psuedocode you've written:
-
-//Refactor/clean up:
-
 var affirmations = [
     
     'I am confident.',
@@ -88,30 +60,42 @@ var mantras = [
     'Be an optimist who carries a rain coat.',
 ];
 
-//NEW PLAN:
-//1.Add Variables as I am using them
-//2.Add Event Listeners as I am using them
-//3.Triple check connections
-
 //VARIABLES:
 
 
 var displayMessageContainer = document.querySelector('.display-message-container');
-var affirmationButton = document.querySelector('.affirmation-button')
-var mantraButton = document.querySelector('.mantra-button')
-var receiveMessageButton = document.querySelector('.receive-message-button')
+var affirmationButton = document.querySelector('.affirmation-button');
+var mantraButton = document.querySelector('.mantra-button');
+var receiveMessageButton = document.querySelector('.receive-message-button');
 var meditationImg = document.querySelector('.meditation-img');
-var actualMessage = document.querySelector(".actual-message");
+var actualMessage = document.querySelector("#your-message");
 var deleteMessageButton = document.querySelector(".delete-message-button");
 var randomAffirmation = document.querySelector("#affirmation-text");
-var randomMantra = document.querySelector("#mantra-text")
+var randomMantra = document.querySelector("#mantra-text");
 
 
 // //EVENT LISTENERS: 
 
-receiveMessageButton = document.addEventListener("click", showRandomMessage);
-deleteMessageButton = document.addEventListener("click", deleteMessage);
+affirmationButton.addEventListener('click', function(){
+   mantraButton.checked = false;
+});
 
+mantraButton.addEventListener('click', function(){
+    affirmationButton.checked = false;
+});
+
+
+receiveMessageButton.addEventListener('click', function(event){
+    event.preventDefault()
+    showRandomMessage()
+});
+
+deleteMessageButton.addEventListener('click', function(event){
+    event.preventDefault()
+    if(actualMessage.innerText.trim()){
+        deleteMessage()
+    }
+})
 
 // //FUNCTIONS AND EVENT HANDLERS:
 
@@ -122,41 +106,38 @@ function getRandomIndex (anArray) {
 };
 
 function getRandomMantra() {
-    var randomMantra = getRandomIndex(mantras);
-    actualMessage.innerHTML = randomMantra;
+    var randomIndex = Math.floor(Math.random() * mantras.length);
+    return mantras[randomIndex];
+}
+
+function getMessage(text){
+    actualMessage.innerHTML = '';
+    actualMessage.innerText += text;
 }
 
 function getRandomAffirmation() {
-    var randomAffirmation = getRandomIndex(affirmations);
-    actualMessage.innerHTML = randomAffirmation;
+    var randomIndex = Math.floor(Math.random() * affirmations.length);
+    return affirmations[randomIndex];
 }
 
-function showRandomMessage(event) {
+function showRandomMessage() {
+    var randomAffirmation = getRandomAffirmation(affirmations);
+    var randomMantra = getRandomMantra(mantras);
     meditationImg.classList.add('hidden');
-    if (affirmationButton.checked === true ) {
-        getRandomAffirmation();
-    } else if (mantraButton.checked === true) {
-        getRandomMantra();
+    if (affirmationButton.checked) {
+        getMessage(randomAffirmation);
+    } else if (mantraButton.checked) {
+        getMessage(randomMantra);
     }
 }
 
 function deleteMessage() {
-    var userDislikesMessage = showRandomMessage.innerText
-
-    for (var i = 0; i < affirmations.length; i++) {
-        if (affirmations[i] === userDislikesMessage) {
-        affirmations.splice(i, 1);
-        }
-    }
-    for (var i = 0; i < mantras.length; i++) {
-        if (mantras[i] === userDislikesMessage) {
-        mantras.splice(i, 1);
-        }
-    }
-    
-    alert(`You won't see that shit ever again unless you refresh the page.`)
-
-    // console.log(deleteMessage)
+    meditationImg.src = "./assets/meditate.svg"
+    meditationImg.style.display = 'none'
+    displayMessageContainer.innerHTML = `
+    <img class="meditation-img" src="./assets/meditate.svg" alt= "meditation image">
+    <p class="hidden random-message"></p>`
+    alert('Out with the old and in with the new. YOU WILL NOT SEE THAT MESSAGE AGAIN!')
 }
 
 
