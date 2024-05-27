@@ -137,7 +137,7 @@ function deleteMessage() {
     displayMessageContainer.innerHTML = `
     <img class="meditation-img" src="./assets/meditate.svg" alt= "meditation image">
     <p class="hidden random-message"></p>`
-    alert('Out with the old and in with the new. YOU WILL NOT SEE THAT MESSAGE AGAIN!')
+    alert('Out with the old and in with the new. That message has been DELETED!')
 }
 
 
