@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script type="text/javascript" src="main.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <title>Self Care Center</title>
   </head>
   <body>
-  
-    <script type="text/javascript" src="main.js"></script>
+    <h1 id="title">✨Self Care Center✨</h1> 
+    <h2 id="header">Which type of message?</h2>
+      <section class="input-box">
+        <div class="input-buttons">
+          <input type="radio" input type= "checkbox" class="affirmation-button" name=message-to-display>
+          <label for="affirmation-text" id="affirmation-text">affirmation</label>
+          <input type="radio" input type= "checkbox" class="mantra-button" name=message-to-display>
+          <label for="mantra-text" id="mantra-text">mantra</label>
+            <div class="receive-button-wrapper">
+              <button class="receive-message-button" type="button">Receive Message</button>
+            </div>
+        </div>
+      </section>
+      <section class="display-message-container">
+        <div class="actual-message-container"> 
+          <h2 class="actual-message"></h2>
+        </div> 
+        <img class="meditation-img" src="./assets/meditate.svg" alt= "meditation image">
+        <p class="hidden random-message"></p>
+      </section>
+      <section class="delete-message-wrapper">
+        <button class="delete-message-button">I don't like this message: please DELETE</button>
+      </section> 
+        <script type="text/javascript" src="main.js"></script>
+      </section>
   </body>
 </html>
+
