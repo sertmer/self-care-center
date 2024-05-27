@@ -16,7 +16,7 @@ A random mantra or affirmation statement generator was created using HTML, CSS a
 
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-![my screenshot](/var/folders/84/__z4yz611rq96hn8ngn61nyw0000gn/T/TemporaryItems/NSIRD_screencaptureui_0VejOy/Screenshot 2024-05-27 at 1.57.59 PM.png)
+![my image](https://ibb.co/zVkHd5R)
 
 ### Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
