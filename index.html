@@ -10,18 +10,26 @@
     <h1 id="title">✨Self Care Center✨</h1> 
     <h2 id="header">Which type of message?</h2>
       <section class="input-box">
-        <form>
-          <input type="radio" class="affirmation" name=message-to-display>
-          <label for="affirmation-button">affirmation</label>
-          <input type="radio" class="mantra" name=message-to-display>
-          <label for="mantra-button">mantra</label>
-            <p><button class="receive-message-button" type="submit">Receive Message</button></p>
-        </form>
+        <div class="input-buttons">
+          <input type="radio" input type= "checkbox" class="affirmation-button" name=message-to-display>
+          <label for="affirmation-text" id="affirmation-text">affirmation</label>
+          <input type="radio" input type= "checkbox" class="mantra-button" name=message-to-display>
+          <label for="mantra-text" id="mantra-text">mantra</label>
+            <div class="receive-button-wrapper">
+              <button class="receive-message-button" type="button">Receive Message</button>
+            </div>
+        </div>
       </section>
       <section class="display-message-container">
-        <img class="img-bell" src="./assets/meditate.svg" alt= "meditation bell"> 
+        <div class="actual-message-container"> 
+          <h2 class="actual-message"></h2>
+        </div> 
+        <img class="meditation-img" src="./assets/meditate.svg" alt= "meditation image">
+        <p class="hidden random-message"></p>
+      </section>
+      <section>
+        <script type="text/javascript" src="main.js"></script>
       </section>
   </body>
 </html>
 
-<!--  -->
