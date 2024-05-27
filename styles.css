@@ -97,6 +97,12 @@ h2 {
   font-family: 'Quicksand';
 }
 
+.delete-message-button {
+  background-color: #134d71;
+  border-radius: 5px; 
+  color: white;
+}
+
 .hidden {
   display: none;
 }
