@@ -95,31 +95,23 @@ var mantras = [
 
 //VARIABLES:
 
-// var affirmation =  document.querySelector('.affirmation-button');
-// var mantra =  document.querySelector('.mantra-button');
+
 var displayMessageContainer = document.querySelector('.display-message-container');
-// var inputBox = document.querySelector('.input-box'); 
 var affirmationButton = document.querySelector('.affirmation-button')
 var mantraButton = document.querySelector('.mantra-button')
 var receiveMessageButton = document.querySelector('.receive-message-button')
 var meditationImg = document.querySelector('.meditation-img');
-var actualMessage = document.querySelector(".actual-message")
-// var inputBoxParent = document.querySelector('input-box-parent')
-// // var mantraButtonChecked = document.querySelector('mantra');
-
-// // NEEED THIS TO CHECK RADIO BUTTONS
-// var affirmationButtonChecked = document.querySelector('affirmation')
-// var mantraButtonChecked = document.querySelector('mantra')
+var actualMessage = document.querySelector(".actual-message");
+var deleteMessageButton = document.querySelector(".delete-message-button");
+var randomAffirmation = document.querySelector("#affirmation-text");
+var randomMantra = document.querySelector("#mantra-text")
 
 
 // //EVENT LISTENERS: 
 
-// // affirmationButton = document.addEventListener("click", showRandomMessage);
-// // mantraButton = document.addEventListener("click", showRandomMessage);
-// // meditationImg = document.addEventListener("click", showRandomMessage);
 receiveMessageButton = document.addEventListener("click", showRandomMessage);
-// affirmationButton = document.addEventListener("click", showRandomMessage);
-// mantraButton = document.addEventListener("click", showRandomMessage);
+deleteMessageButton = document.addEventListener("click", deleteMessage);
+
 
 // //FUNCTIONS AND EVENT HANDLERS:
 
@@ -127,7 +119,7 @@ receiveMessageButton = document.addEventListener("click", showRandomMessage);
 function getRandomIndex (anArray) {
     aMessageIndex = Math.floor(Math.random() * anArray.length);
     return anArray.at(aMessageIndex);
-  };
+};
 
 function getRandomMantra() {
     var randomMantra = getRandomIndex(mantras);
@@ -139,13 +131,32 @@ function getRandomAffirmation() {
     actualMessage.innerHTML = randomAffirmation;
 }
 
-function showRandomMessage() {
+function showRandomMessage(event) {
     meditationImg.classList.add('hidden');
     if (affirmationButton.checked === true ) {
         getRandomAffirmation();
     } else if (mantraButton.checked === true) {
         getRandomMantra();
     }
+}
+
+function deleteMessage() {
+    var userDislikesMessage = showRandomMessage.innerText
+
+    for (var i = 0; i < affirmations.length; i++) {
+        if (affirmations[i] === userDislikesMessage) {
+        affirmations.splice(i, 1);
+        }
+    }
+    for (var i = 0; i < mantras.length; i++) {
+        if (mantras[i] === userDislikesMessage) {
+        mantras.splice(i, 1);
+        }
+    }
+    
+    alert(`You won't see that shit ever again unless you refresh the page.`)
+
+    // console.log(deleteMessage)
 }
 
 

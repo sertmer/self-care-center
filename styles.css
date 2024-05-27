@@ -48,6 +48,14 @@ h2 {
   font-style: italic;
 }
 
+/* /* .input-buttons {
+  display: block;;
+} */
+
+/* .affirmation-button, #affirmation-text  {
+  margin-right: 30px;
+} */ 
+
 .receive-message-button {
   background-color: #134d71;
   color: white;
@@ -102,6 +110,16 @@ h2 {
   border-radius: 5px; 
   color: white;
 }
+
+/* .message-removed-announcement {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  width: 30px;
+} */
 
 .hidden {
   display: none;
