@@ -1,8 +1,100 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
-light-yellow - #f7e4bf;
-light-blue - #78a7c6;
-dark-blue - #134d71;
-white - #ffffff;
-black - #000000;
-*/
+title {
+    font-family: Quicksand;
+    color: #000000;
+}
+
+body {
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 100vh;
+}  
+
+h1 {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  color: white;
+  font-family: quicksand;
+ }
+
+h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 5px;
+  font-family: quicksand;
+}
+
+
+.input-box {
+  display: flex;
+  background-color: white;
+  justify-content: space-around;
+  height: 60px;
+  width: 400px;
+  margin: auto;
+  padding-top: 10px;
+  border-radius: 5px; 
+  text-align: center;
+  font-style: italic;
+}
+
+.receive-message-button {
+  background-color: #134d71;
+  color: white;
+  width: 150px;
+  border-radius: 5px;
+  border-width: 0;
+  font-weight: normal;
+}
+
+.display-message-container {
+  margin: auto;
+  border-radius: 5px;
+  margin-top: 70px;
+  width: 500px;
+  height: 40px;
+  padding: 20px;
+  text-align: center;
+  font-family: 'quicksand', sans-serif;
+  background-color: white;
+  padding-bottom: 40px;
+}
+
+.meditation-img {
+  width:60px;
+  height:50px;
+  background:white;
+  color:white;
+  text-decoration:none;
+  border-radius: 5px; 
+  text-align: center;
+}
+
+.receive-button-wrapper {
+  margin-top: 15px
+}
+
+.actual-message {
+  color: black;
+  font-size: 10pt;
+}
+
+.delete-message-wrapper {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  background: #84a8bf;
+  font-family: 'Quicksand';
+}
+
+.delete-message-button {
+  background-color: #134d71;
+  border-radius: 5px; 
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
